@@ -26,4 +26,4 @@ Python, Pandas, NumPy, Matplotlib, scikit-learn, yfinance
 
 - Backtested accuracy: ~50.5%
 - Model performance varies across market regimes, peaking above 65% in trending markets and dropping during high-volatility periods such as the 2020 COVID crash.
-
+- The model achieves ~50.5% backtested accuracy, reflecting the inherent difficulty of next-day market prediction using price-based features alone, with performance varying significantly across market regimes.
