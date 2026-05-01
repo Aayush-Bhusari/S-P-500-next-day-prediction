@@ -1,17 +1,17 @@
-# S&P 500 Next-Day Direction Prediction
+# S&P 500 Next-Day Direction Classifier
 
-A machine learning pipeline to predict the next-day price direction of the S&P 500 index using 25 years of historical data.
+A machine learning pipeline to predict whether the S&P 500 index will close higher or lower the following trading day.
 
 ## Overview
 
-This project trains a Random Forest classifier on 18 engineered features derived from price, volume, and technical indicators. A rolling backtesting system is used to evaluate real-world performance and prevent look-ahead bias.
+Trained a Random Forest classifier on 25 years of historical S&P 500 data using 18 engineered features derived from price, volume, and technical indicators. A rolling backtesting system evaluates real-world performance and prevents look-ahead bias. Hyperparameters were tuned using GridSearchCV with TimeSeriesSplit cross-validation.
 
 ## Features Used
 
 - Lag features (1-day, 5-day)
 - Moving average ratios (MA10, MA50, MA200)
 - RSI (14-day)
-- Daily, 5-day, and 21-day returns
+- Returns (1-day, 5-day, 21-day)
 - Volatility (10-day, 21-day)
 - Momentum (10-day, 21-day)
 - Volume ratios (MA10, MA50)
@@ -20,16 +20,9 @@ This project trains a Random Forest classifier on 18 engineered features derived
 
 ## Tech Stack
 
-- Python, Pandas, NumPy, Matplotlib
-- scikit-learn (RandomForestClassifier, GridSearchCV, TimeSeriesSplit)
-- yfinance
+Python, Pandas, NumPy, Matplotlib, scikit-learn, yfinance
 
 ## Results
 
 - Backtested accuracy: ~50.5%
-- Model performance varies significantly across market regimes, peaking above 65% in trending markets and dropping during high-volatility periods such as the 2020 COVID crash.
-
-## How to Run
-
-1. Open the notebook in Google Colab
-2. Run all cells in order
+- Model performance varies across market regimes, peaking above 65% in trending markets and dropping during high-volatility periods such as the 2020 COVID crash.
