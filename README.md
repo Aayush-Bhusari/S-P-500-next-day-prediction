@@ -22,7 +22,11 @@ Trained a Random Forest classifier on 25 years of historical S&P 500 data using 
 
 Python, Pandas, NumPy, Matplotlib, scikit-learn, yfinance
 
-## Results
+## Learning Outcomes
 
-- Backtested accuracy: ~50.5%
-- Model performance varies across market regimes, peaking above 65% in trending markets and dropping during high-volatility periods such as the 2020 COVID crash.
+- Built a complete ML pipeline for time-series financial data from scratch
+- Understood why shuffling data is invalid for time-series and implemented time-aware splitting
+- Learned the difference between overfitting to a test set vs genuine generalization
+- Implemented a rolling backtesting system that simulates real-world trading conditions
+- Applied GridSearchCV with TimeSeriesSplit for proper hyperparameter tuning on sequential data
+- Understood the Efficient Market Hypothesis in practice — price-based features alone cannot consistently predict market direction
